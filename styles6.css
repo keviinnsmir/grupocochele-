@@ -1,0 +1,108 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header y video */
+.header {
+    position: relative;
+    height: vh;
+    overflow: hidden;
+}
+
+#video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.icon {
+    width: 150px;
+    height: auto;
+}
+
+/* Sección de características */
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    width: 45%;
+}
+
+.feature-img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.feature-text {
+    margin-left: 20px;
+    max-width: 500px;
+}
+
+.feature-text h2 {
+    color: #1b6b3b; /* Verde Iberdrola */
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.feature-text p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Estilo para el footer */
+.footer {
+    background-color: #1b6b3b; /* Verde Iberdrola */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estilo para cuando se selecciona el texto */
+::selection {
+    background-color: #1b6b3b; /* Verde Iberdrola */
+    color: white;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .feature-img {
+        width: 80%;
+    }
+}

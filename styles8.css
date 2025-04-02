@@ -1,0 +1,338 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Barra de navegación animada */
+nav {
+    background: linear-gradient(90deg, #006c3f, #00a98f);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+    overflow: hidden;
+    position: relative;
+    animation: moverNav 4s ease-in-out infinite; /* 🔥 Se mueve suavemente */
+}
+
+/* Animación de la barra de navegación */
+@keyframes moverNav {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(8px); }
+    100% { transform: translateX(0); }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 320px; /* Ajusta el tamaño según tu imagen */
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo span {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+}
+/* Barra de navegación */
+.navbar {
+    list-style: none;
+    display: flex;
+}
+
+.navbar li {
+    padding: 0 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #f7941e;
+}
+
+/* Fila de hormiguitas animadas */
+.hormigas {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-image: url('hormiga.png'); /* Cambia por la ruta correcta */
+    background-repeat: repeat-x;
+    background-size: 20px;
+    animation: moverHormigas 2s linear infinite;
+    opacity: 0.7;
+}
+
+/* Animación de las hormiguitas */
+@keyframes moverHormigas {
+    0% { background-position: 0 0; }
+    100% { background-position: -100px 0; }
+}
+
+/* Sección Hero con video */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+.overlay h1 {
+    font-size: 4rem; /* Tamaño grande */
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Efecto de sombra */
+}
+
+.overlay p {
+    font-size: 1.8rem; /* Texto más grande debajo */
+    max-width: 900px;
+    margin-top: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+}
+.contenido {
+    position: relative;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Para centrarlo en la imagen */
+}
+
+.recuadro-historia {
+    background: #00a98f; /* Fondo semitransparente elegante */
+    color: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    max-width: 700px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque moderno */
+}
+
+.recuadro-historia h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #f7941e; /* Color destacado */
+}
+
+.recuadro-historia p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 60px; 
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: rgb(38, 94, 36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    flex-direction: column;
+}
+
+
+.icono {
+    width: 1000px; 
+    height: 550px; 
+    margin-bottom: 20px; 
+    animation: flotar 4s ease-in-out infinite, mover 6s ease-in-out infinite; 
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); 
+    }
+    100% {
+        transform: translateY(0); 
+    }
+}
+
+@keyframes mover {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px); 
+    }
+    100% {
+        transform: translateX(0); 
+    }
+}
+
+/* Fondo de la portada */
+.portada {
+    background-image: url('cochele.jpg'); /* Sustituye con la imagen de tu preferencia */
+    background-size: cover;
+    background-position: center center;
+    height: 40vh; /* Reducido a una altura más pequeña */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+/* Fondo oscuro con opacidad para el texto */
+.portada .contenido-portada {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.portada h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 2px;
+}
+
+.portada p {
+    font-size: 1.5rem;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo del contenido principal */
+.contenido {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contenido h2 {
+    font-size: 2.5rem;
+    color: #006F3F; /* Verde Iberdrola */
+    margin-bottom: 15px;
+    border-bottom: 3px solid #006F3F;
+    padding-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.contenido h2:hover {
+    color: #00A859; /* Cambio de color al pasar el ratón */
+}
+
+.contenido p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Estilo del pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #006F3F; /* Verde Iberdrola */
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+footer:hover {
+    background-color: #00A859; /* Aumenta la opacidad al pasar el ratón */
+    cursor: pointer;
+}
+
+/* Estilo para links */
+a {
+    color: #006F3F;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #00A859;
+}
