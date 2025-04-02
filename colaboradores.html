@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Cochele</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="2023_1_FONDO_ARENA.jpg" alt="Logo de KevShop">
+        </div>
+        <ul class="navbar">
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+            <li><a href="colaboradores.html">Colaboradores</a></li>
+            <li><a href="atencion-al-cliente.html">Atención al Cliente Iberdrola</a></li>
+            <li><a href="ubicacion.html">Ubicación</a></li>
+            <li><a href="smart-solar.html">Smart Solar</a></li>
+            <li><a href="smart-mobility.html">Smart Mobility</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <div class="hormigas"></div> 
+    </nav>
+    <header>
+        <h1>Nuestros Colaboradores</h1>
+    </header>
+    
+    <main>
+        <section class="colaborador">
+            <h2>Iberdrola</h2>
+            <button onclick="mostrarIberdrola()">Ver Página</button>
+            <div id="iframe-container" class="hidden">
+                <iframe id="iframe-iberdrola" src="https://www.iberdrola.com" frameborder="0"></iframe>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        function mostrarIberdrola() {
+            document.getElementById("iframe-container").classList.toggle("hidden");
+        }
+    </script>
+</body>
+</html>
