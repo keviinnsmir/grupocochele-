@@ -1,0 +1,291 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Top Bar (Cinta Movible) */
+.top-bar {
+    background: linear-gradient(90deg, #006c3f, #00a98f);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 1em;
+    animation: scrollText 20s linear infinite;
+}
+
+@keyframes scrollText {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Header Styles */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #006c3f, #00a98f);
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Logo */
+header .logo img {
+    height: 50px;
+}
+
+/* Navigation Menu */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li {
+    margin: 0;
+    position: relative;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    transition: color 0.3s, transform 0.3s;
+    padding: 5px 10px;
+}
+
+header nav ul li a:hover {
+    color: #ff6f00; /* Iberdrola highlight color */
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(255, 111, 0, 0.8);
+}
+
+/* Underline Effect on Hover */
+header nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ff6f00;
+    transition: width 0.3s ease-in-out;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sección Hero con video */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+.overlay h1 {
+    font-size: 4rem; /* Tamaño grande */
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Efecto de sombra */
+}
+
+.overlay p {
+    font-size: 1.8rem; /* Texto más grande debajo */
+    max-width: 900px;
+    margin-top: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+}
+.contenido {
+    position: relative;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Para centrarlo en la imagen */
+}
+
+.recuadro-historia {
+    background: #00a98f; /* Fondo semitransparente elegante */
+    color: white;
+    padding: 30px 40px;
+    border-radius: 15px;
+    max-width: 700px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque moderno */
+}
+
+.recuadro-historia h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #f7941e; /* Color destacado */
+}
+
+.recuadro-historia p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+.contenido {
+    background: url('IMG-20221030-WA0009.jpg') center/cover no-repeat;
+    padding: 100px 20px;
+    color: #000000;
+}
+
+.contenido h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.contenido p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Sección de valores */
+.valores {
+    background: linear-gradient(135deg,  #006c3f, #00a98f);
+    color: white;
+    padding: 30px 20px;
+}
+
+.valores h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card img {
+    width: 250px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.2rem;
+}
+
+/* Sección de colaboradores con slider */
+.colaboradores {
+    padding: 100px 20px;
+    background: #f4f4f4;
+}
+
+.colaboradores h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Slider automático */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-container {
+    display: flex;
+    gap: 30px;
+    animation: scroll 8s linear infinite;
+}
+
+.slider img {
+    width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+/* Animaciones */
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
